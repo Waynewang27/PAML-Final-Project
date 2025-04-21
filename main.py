@@ -56,16 +56,15 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 # Load preprocessed dataset
 df = pd.read_csv('Datasets/preprocessed_data.csv')
-#######change
-# Drop columns related to engagement metrics to avoid data leakage
-engagement_cols = ['Views','Likes','Shares','Comments']  # add more if needed
-df = df.drop(columns=[col for col in engagement_cols if col in df.columns])
 
+# Drop columns related to engagement metrics to avoid data leakage
+engagement_cols = ['Views','Likes','Shares','Comments','Conversion_Rate'] 
+df = df.drop(columns=[col for col in engagement_cols if col in df.columns])
 
 # Separate features and target
 X = df.drop(columns=['Engagement_Level_Calculated'])
 y = df['Engagement_Level_Calculated']
-########change
+
 # Split into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
