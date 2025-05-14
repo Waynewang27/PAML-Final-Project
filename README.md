@@ -20,19 +20,24 @@ The Random Forest model proved to be more effective at classifying all engagemen
 - **Model comparison**: Performance metrics for both implemented algorithms
 
 ## Setup Instructions
-1. Clone the repository:
-git clone <repo>
-cd project
 
-2. Create and activate a virtual environment:
-python -m venv venv
-source venv/bin/activate
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd project
 
-3. Install dependencies:
-pip install -r requirements.txt
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
 
-4. Run the Streamlit app:
-streamlit run app.py
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+
+4. **Run the Streamlit app:**
+   ```bash
+   streamlit run app.py
 
 ## Application Structure
 
